@@ -1,0 +1,50 @@
+是linux 还是git 或者其他 命令窗口 操作文件  
+新建文件夹  mkdir folderName 
+新建文件 git touch fileName 
+编辑文件 git vi filename
+i 进入编辑模式 编辑完成 按esc 退出编辑模式 输入 :wq 保存当前编辑
+删除工作区就是本地文件 rm filename 
+删除版本库文件 git rm filename 然后 git commit -m "remove file"
+
+rm -r folderName   删除文件夹命令
+
+git 创建分支 切换分支
+git branch branchName   切换 git checkout branchName
+
+两条命令合并为一条  git branch -b branchName 创建分支并切换到新分支
+ 
+合并某一个分支的修改到当前分支 merge branch branchNmae(目标分支名称)
+
+解决冲突 conflict fixed
+本地先解决冲突 在提交
+
+删除无用分支 git branch -d branchName
+
+如果当前任务已进行中，暂时不能提交，突然接到紧急 bug修改任务，则可隐匿当前进度，创建新bug分支 并修改bug提交。再切回之前任务分支，并解除隐匿任务。
+
+git status | git stash |git branch -b bugFeature |修改bug git add file |git commit -m "提交bug" |切换回之前任务分支 git checkout otherBranchName | git status | git stash list 查看当前隐匿任务|git stash apply 恢复之前工作任务（h恢复之后 stash内容并未删除，用git stash drop 删除） |或者用git stash pop (恢复的同事把stash内容也删除了)
+
+vim 编辑模式下 先按esc 退出编辑模式  在按快捷键
+按1 接着按shit+G 快速定位到编辑第一行开始位置
+按行数 接着按shift+G 快速定位到编辑的某一行
+shit+G   ------快递定位到最后一行
+
+
+
+git 连接远程仓库
+1、先建立本地连接远程的SSH key
+ssh-keygen -t rsa -C "1755779094@qq.com"
+:-t 指定密钥类型 默认是rsa 可以省略
+:-C 设置注释文字 比如邮箱
+-f 指定密钥文件存储文件名  一般默认不设置
+除此之外 还会让输入
+created directory "/home/stephenzhou/.ssh"
+enter passhrase(empty for no passhrase)   暂留
+
+id_rsa 是私钥，id_rsa.Pub是公钥。 接着 拿公钥去github上添加ssh kye
+
+2.本地项目绑定远程空仓库
+git remote add origin gitsshkey(git@github.com:1755779094/mjq.git)
+然后推送本地到服务器
+git push -u origin master
+
