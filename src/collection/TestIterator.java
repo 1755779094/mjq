@@ -6,7 +6,7 @@ import java.util.List;
 
 public class TestIterator {
 	
-	static final String a = "ÈÝÆ÷";
+	static final String a = "ï¿½ï¿½ï¿½ï¿½";
 	
 	private void testList() {
 		int[] intarg = new int[]{1,2,3};
@@ -33,6 +33,8 @@ public class TestIterator {
 	
 	
 	public static void main(String[] args) {
+		System.out.println(Integer.MIN_VALUE +"***"+Integer.MAX_VALUE);
+		
 		TestIterator t = new TestIterator();
 		t.testList();
 		String s = "abc";
