@@ -21,8 +21,7 @@ public class testNum {
 		//当long类型右移位数大于等于64位操作时，会先求余后再进行移位操作
 		System.out.println("longValue右移64位：" + (longValue >> 64));//求余为64%64=0，相当于右移0位（不移位）
 		System.out.println("longValue右移72位：" + (longValue >> 72));//求余为72%64=8，相当于右移8位
-		System.out.println("longValue右移128位：" + (longValue >> 128));
-		
+		System.out.println("longValue右移128位：" + (longValue >> 128));		
 	}
 
 }

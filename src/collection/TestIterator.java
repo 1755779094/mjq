@@ -26,7 +26,7 @@ public class TestIterator {
 		int i = mList.length;
 		int[] nList = Arrays.copyOf(mList, 2);
 		
-		List  sa = new ArrayList();
+		List<String>  sa = new ArrayList();
 		
 		
 	}

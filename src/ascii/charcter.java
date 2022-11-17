@@ -4,6 +4,7 @@ public class charcter {
 
 	public static void main(String[] args) {
 		testStringbuilder();
+		test();
 	}
 	
 	public static void testStringbuilder() {
